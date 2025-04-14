@@ -1,5 +1,3 @@
-regexp:\\.ua$
-regexp:\\.ge$
 domain:googleapis.com
 domain:google.com
 domain:nordvpn.com
@@ -149,3 +147,5 @@ domain:discordpartygames.com
 domain:discordsays.com
 domain:discordsez.com
 domain:discordstatus.com
+regexp:\\.ua$
+regexp:\\.ge$
