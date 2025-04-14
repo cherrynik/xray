@@ -23,10 +23,10 @@ jobs:
       - name: Check output file permissions
         run: |
           ls -l output/
-          file output/custom.dat
-          head output/custom.dat || echo "cannot read"
+          file output/geosite.dat
+          head output/geosite.dat || echo "cannot read"
 
-      - name: Upload compiled custom.dat to server
+      - name: Upload compiled geosite.dat to server
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SERVER_HOST }}

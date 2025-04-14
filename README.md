@@ -21,7 +21,7 @@
 
 In your routing settings, use the following format:
 ```json
-"ext:<filename>.dat:<scope>"
+"ext:geosite.dat:general"
 ```
 
 ### Example
@@ -29,7 +29,7 @@ In your routing settings, use the following format:
 {
   "type": "field",
   "domain": [
-    "ext:custom.dat:custom"
+    "ext:geosite.dat:general"
   ],
   "network": "TCP,UDP",
   "balancerTag": "Balancer"
