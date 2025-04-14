@@ -44,3 +44,4 @@ jobs:
           script: |
             sudo mv ~/tmp/output/geosite.dat /usr/local/x-ui/bin/geosite.dat
             rm -rf ~/tmp
+            sudo x-ui restart
