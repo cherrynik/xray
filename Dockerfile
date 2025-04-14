@@ -1,19 +1,16 @@
-# Stage 1: Builder
 FROM golang:alpine AS builder
 
-# Install Git and other needed tools
 RUN apk update && apk add --no-cache git
 
-# Set working dir
 WORKDIR /app
 
-# Clone the repo
 RUN git clone https://github.com/v2fly/domain-list-community.git .
 
-# Build the project
-RUN go install .
+RUN go mod tidy
 
 COPY ./input /app/input
 
-# Default command — uses the repo’s internal data unless overridden
-CMD ["go", "run", "./"]
+RUN adduser -D appuser
+USER appuser
+
+CMD ["sh", "-c", "go run ./ --datapath=./input && cp dlc.dat ./output/custom.dat && chmod 644 ./output/custom.dat"]

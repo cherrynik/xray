@@ -1,0 +1,7 @@
+services:
+  domain-list-community:
+    build:
+      context: .
+    volumes:
+      - ./input:/app/input
+      - ./output:/app/output
