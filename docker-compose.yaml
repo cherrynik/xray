@@ -1,5 +1,5 @@
 services:
-  domain-list-community:
+  xray:
     build:
       context: .
     volumes:

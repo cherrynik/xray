@@ -34,6 +34,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "output/custom.dat"
           target: "/usr/local/x-ui/bin/custom.dat"
+          debug: true
 
       # - name: Set permissions on server
       #   uses: appleboy/ssh-action@v1.0.0
