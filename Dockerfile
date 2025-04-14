@@ -1,21 +1,19 @@
-FROM golang:alpine
+# Stage 1: Builder
+FROM golang:alpine AS builder
 
-# Install Git in the container (Git is needed to clone the repository)
-RUN apk update && apk add git
+# Install Git and other needed tools
+RUN apk update && apk add --no-cache git
 
-# Set working directory inside the container
+# Set working dir
 WORKDIR /app
 
-# Clone the project repository from GitHub
+# Clone the repo
 RUN git clone https://github.com/v2fly/domain-list-community.git .
 
-# Download all the project dependencies
-RUN go mod download
+# Build the project
+RUN go install .
 
-# Expose a volume if you need to map a custom data directory
-VOLUME ["custom/"]
+COPY ./custom /app/custom
 
-# Default command:
-# This command generates dlc.dat using the data files in the repository's "data" directory.
-# To use a custom data path, override the command when running the container.
-ENTRYPOINT ["go", "run", "./"]
+# Default command — uses the repo’s internal data unless overridden
+CMD ["go", "run", "./"]
