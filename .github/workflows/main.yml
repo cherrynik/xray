@@ -43,3 +43,4 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             sudo mv ~/tmp/output/custom.dat /usr/local/x-ui/bin/custom.dat
+            rm -rf ~/tmp
