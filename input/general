@@ -147,5 +147,3 @@ domain:discordpartygames.com
 domain:discordsays.com
 domain:discordsez.com
 domain:discordstatus.com
-regexp:\\.ua$
-regexp:\\.ge$
