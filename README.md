@@ -39,3 +39,6 @@ In your routing settings, use the following format:
 Replace:
 - `<filename>` with your actual file name
 - `<scope>` with your desired routing scope
+
+https://github.com/Skrill0/AntiFilter-Domains
+https://github.com/Skrill0/AntiFilter-IP
