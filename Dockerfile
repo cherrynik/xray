@@ -10,7 +10,4 @@ RUN go mod tidy
 
 COPY ./input /app/input
 
-RUN adduser -D appuser
-USER appuser
-
 CMD ["sh", "-c", "go run ./ --datapath=./input && cp dlc.dat ./output/custom.dat && chmod 644 ./output/custom.dat"]
