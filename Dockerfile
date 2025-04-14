@@ -13,7 +13,7 @@ RUN git clone https://github.com/v2fly/domain-list-community.git .
 # Build the project
 RUN go install .
 
-COPY ./custom /app/custom
+COPY ./input /app/input
 
 # Default command — uses the repo’s internal data unless overridden
 CMD ["go", "run", "./"]
