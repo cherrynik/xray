@@ -26,3 +26,7 @@ jobs:
         run: |
           sudo mv output/geosite.dat /usr/local/x-ui/bin/geosite.dat
           sudo x-ui restart
+
+      - name: Clean up previous containers
+        run: |
+          yes | docker system prune
