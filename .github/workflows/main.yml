@@ -34,7 +34,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: user/app:latest
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/xray-builder:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -51,7 +51,7 @@ jobs:
           docker run --rm \
             -v $(pwd)/input:/app/input \
             -v $(pwd)/output:/app/output \
-            user/app:latest
+            ${{ vars.DOCKERHUB_USERNAME }}/xray-builder:latest
           ls -lh output/
 
       - name: Check output file permissions
