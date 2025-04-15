@@ -348,18 +348,6 @@ func ParseList(list *List, ref map[string]*List) (*ParsedList, error) {
 }
 
 func main() {
-	err := downloadAndRename(communityListURL, "antifilter-community")
-	if err != nil {
-		fmt.Println("Произошла ошибка при загрузке antifilter-community:", err)
-		return
-	}
-
-	err = downloadAndRename(mainListURL, "antifilter")
-	if err != nil {
-		fmt.Println("Произошла ошибка при загрузке antifilter:", err)
-		return
-	}
-
 	flag.Parse()
 
 	dir := *dataPath
