@@ -22,8 +22,9 @@ jobs:
           file output/geosite.dat
           head output/geosite.dat || echo "cannot read"
 
-      - name: Move to 3x-ui location
+      - name: Backup old and apply new geosite.dat
         run: |
+          sudo cp /usr/local/x-ui/bin/geosite.dat /usr/local/x-ui/bin/geosite.dat.bak
           sudo mv output/geosite.dat /usr/local/x-ui/bin/geosite.dat
           sudo x-ui restart
 
