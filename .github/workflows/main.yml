@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted]
 
     steps:
       - name: Checkout code
@@ -26,7 +26,6 @@ jobs:
         with:
           context: .
           push: true
-          load: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/xray-builder:latest
           cache-from: |
             ${{ vars.DOCKERHUB_USERNAME }}/xray-builder:cache
@@ -49,15 +48,6 @@ jobs:
           file output/geosite.dat
           head output/geosite.dat || echo "cannot read"
 
-      - name: Upload compiled geosite.dat to server
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "output/geosite.dat"
-          target: "~/tmp"
-
       - name: Move to 3x-ui location
         uses: appleboy/ssh-action@v1
         with:
@@ -65,6 +55,5 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            sudo mv ~/tmp/output/geosite.dat /usr/local/x-ui/bin/geosite.dat
-            rm -rf ~/tmp
+            sudo mv output/geosite.dat /usr/local/x-ui/bin/geosite.dat
             sudo x-ui restart
