@@ -28,8 +28,12 @@ jobs:
           push: true
           load: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/xray-builder:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          cache-from: |
+            ${{ vars.DOCKERHUB_USERNAME }}/xray-builder:cache
+            type=gha
+          cache-to: |
+            ${{ vars.DOCKERHUB_USERNAME }}/xray-builder:cache
+            type=gha,mode=max
 
       - name: Run Docker
         run: |
