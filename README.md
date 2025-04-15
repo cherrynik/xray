@@ -1,39 +1,32 @@
+# X-Ray GeoSite Generator
+
 [![Build and Deploy](https://github.com/cherrynik/xray/actions/workflows/main.yml/badge.svg)](https://github.com/cherrynik/xray/actions/workflows/main.yml)
 
-Sources are taken from:
+This project automatically generates and deploys geosite.dat files for X-UI using GitHub Actions.
 
-https://github.com/Skrill0/AntiFilter-Domains
+## Setup Instructions
 
-https://github.com/Skrill0/AntiFilter-IP
+1. Fork this repository to your GitHub account
 
+2. Set up a self-hosted GitHub Actions runner on your server:
+   - Go to your repository settings
+   - Navigate to Actions > Runners
+   - Click "New self-hosted runner"
+   - Follow the instructions to install and configure the runner on your server
 
-# Installation and Configuration Guide
-
-## Installation Steps
-
-1. Copy your compiled file to the x-ui binary directory:
-   ```bash
-   sudo cp your-file /usr/local/x-ui/bin/
-   ```
-
-2. Verify file permissions:
-   ```bash
-   ls -alr /usr/local/x-ui/bin/
-   ```
-
-3. If needed, set the correct file permissions:
-   ```bash
-   sudo chown <user>:<uid> /usr/local/x-ui/bin/your-file
-   ```
+3. The runner will automatically:
+   - Build the geosite.dat file from your input lists
+   - Deploy it to `/usr/local/x-ui/bin/`
+   - Restart the x-ui service
 
 ## Configuration
 
-In your routing settings, use the following format:
+In your X-UI routing settings, use the following format:
 ```json
 "ext:geosite.dat:general"
 ```
 
-### Example
+### Example Configuration
 ```json
 {
   "type": "field",
@@ -45,7 +38,16 @@ In your routing settings, use the following format:
 }
 ```
 
-Replace:
-- `<filename>` with your actual file name
-- `<scope>` with your desired routing scope
+## Input Files
+
+Place your domain lists in the `input` directory. The generator supports:
+- Domain lists (one per line)
+- Comments (lines starting with #)
+- Multiple files (each will be processed separately)
+
+## Sources
+
+Code sourced from:
+- [AntiFilter-Domains](https://github.com/Skrill0/AntiFilter-Domains)
+- [AntiFilter-IP](https://github.com/Skrill0/AntiFilter-IP)
 
