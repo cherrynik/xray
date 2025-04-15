@@ -5,9 +5,9 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"io"
+	// "io"
 	"io/ioutil"
-	"net/http"
+	// "net/http"
 	"os"
 	"path/filepath"
 	"sort"
@@ -23,8 +23,8 @@ var (
 	outputName       = flag.String("outputname", "geosite.dat", "Name of the generated dat file")
 	outputDir        = flag.String("outputdir", "./", "Directory to place all generated files")
 	exportLists      = flag.String("exportlists", "", "Lists to be flattened and exported in plaintext format, separated by ',' comma")
-	communityListURL = "https://community.antifilter.download/list/domains.lst"
-	mainListURL      = "https://antifilter.download/list/domains.lst"
+	// communityListURL = "https://community.antifilter.download/list/domains.lst"
+	// mainListURL      = "https://antifilter.download/list/domains.lst"
 )
 
 type Entry struct {
@@ -44,46 +44,46 @@ type ParsedList struct {
 	Entry     []Entry
 }
 
-// Функция для загрузки файла и переименования
-func downloadAndRename(url, newName string) error {
-	// Загрузка файла
-	err := downloadFile(url, filepath.Join(*dataPath, newName))
-	if err != nil {
-		return err
-	}
+// // Функция для загрузки файла и переименования
+// func downloadAndRename(url, newName string) error {
+// 	// Загрузка файла
+// 	err := downloadFile(url, filepath.Join(*dataPath, newName))
+// 	if err != nil {
+// 		return err
+// 	}
 
-	return nil
-}
+// 	return nil
+// }
 
-// Функция для загрузки файла по URL
-func downloadFile(url, destination string) error {
-	// Создание папки, если её нет
-	if err := os.MkdirAll(filepath.Dir(destination), os.ModePerm); err != nil {
-		return err
-	}
+// // Функция для загрузки файла по URL
+// func downloadFile(url, destination string) error {
+// 	// Создание папки, если её нет
+// 	if err := os.MkdirAll(filepath.Dir(destination), os.ModePerm); err != nil {
+// 		return err
+// 	}
 
-	// Создание файла
-	file, err := os.Create(destination)
-	if err != nil {
-		return err
-	}
-	defer file.Close()
+// 	// Создание файла
+// 	file, err := os.Create(destination)
+// 	if err != nil {
+// 		return err
+// 	}
+// 	defer file.Close()
 
-	// Получение данных по URL
-	response, err := http.Get(url)
-	if err != nil {
-		return err
-	}
-	defer response.Body.Close()
+// 	// Получение данных по URL
+// 	response, err := http.Get(url)
+// 	if err != nil {
+// 		return err
+// 	}
+// 	defer response.Body.Close()
 
-	// Копирование данных в файл
-	_, err = io.Copy(file, response.Body)
-	if err != nil {
-		return err
-	}
+// 	// Копирование данных в файл
+// 	_, err = io.Copy(file, response.Body)
+// 	if err != nil {
+// 		return err
+// 	}
 
-	return nil
-}
+// 	return nil
+// }
 
 func (l *ParsedList) toPlainText(listName string) error {
 	var entryBytes []byte
