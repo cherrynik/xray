@@ -1,3 +1,5 @@
+[![Build and Deploy](https://github.com/cherrynik/xray/actions/workflows/main.yml/badge.svg)](https://github.com/cherrynik/xray/actions/workflows/main.yml)
+
 # Installation and Configuration Guide
 
 ## Installation Steps
