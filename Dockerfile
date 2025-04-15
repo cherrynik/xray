@@ -4,7 +4,7 @@ RUN apk update && apk add --no-cache git
 
 WORKDIR /app
 
-COPY . .
+COPY go.mod go.sum main.go ./
 
 RUN go mod tidy
 
