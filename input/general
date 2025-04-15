@@ -2,18 +2,15 @@
 domain:anthropic.com
 domain:claude.ai
 domain:apple.com
-
 # Seeds
 domain:torogrow.com
 domain:alfaseeds-012.xyz
 domain:0420.bz
 domain:semenarastut.run
 domain:rastarasha.com
-
 # IP
 domain:nordvpn.com
 # domain:2ip.io
-
 # Coding
 domain:nx.dev
 domain:sandboxsql.com
@@ -45,19 +42,15 @@ domain:talkingkotlin.com
 domain:datalore.io
 domain:sentry.io
 domain:stackoverflow.com
-
 # Google
 domain:googleapis.com
 domain:google.com
-
 # TV
 domain:ovh.net
 domain:troya.one
 domain:iptv.app
-
 # Torrent
 domain:nnmclub.to
-
 # Games
 domain:gta5majestic.com
 domain:appsflyer.com
@@ -65,17 +58,14 @@ domain:espritgames.ru
 domain:idlegog.com
 domain:windows.net
 domain:steamcloudsweden.blob.core.windows.net
-
 # Streaming
 domain:netflix.com
-
 # Music
 domain:snd.sc
 domain:sndcdn.com
 domain:soundcloud.cloud
 domain:soundcloud.com
 domain:spotify.com
-
 # Cloud
 domain:amazonaws.com
 domain:cloudflare-ech.com
@@ -86,12 +76,10 @@ domain:portal.cloud.hashicorp.com
 domain:hashicorp.com
 domain:splunkcloud.com
 domain:splunk.com
-
 # E-commerce
 domain:ultra-shop.com
 domain:nike.com
 domain:amazon.com
-
 # Networks
 domain:linkedin.com
 domain:licdn.com
@@ -130,19 +118,15 @@ domain:musical.ly
 domain:pstatp.com
 domain:rocket-cdn.com
 domain:sgsnssdk.com
-
 # Email
 domain:temp-mail.org
-
 # Hardware
 domain:intel.com
 domain:nvidia.com
 domain:dell.com
-
 # Flatpak
 domain:flathub.org
 domain:apt.pop-os.org
-
 # TikTok
 domain:tiktok.com
 domain:tiktokcdn-eu.com
@@ -161,7 +145,6 @@ domain:ttoverseaus.net
 domain:ttwstatic.com
 domain:worldfcdn.com
 domain:worldfcdn2.com
-
 # Discord
 domain:dis.gd
 domain:discord-attachments-uploads-prd.storage.googleapis.com
