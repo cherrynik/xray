@@ -13,11 +13,14 @@ rastarasha.com
 # IP
 nordvpn.com
 cloudflare.com
-NL.net
-isc.org
-vniiftri.ru
+
+# Time
+time.cloudflare.com
+ntp0.NL.net
+clock.isc.org
+ntp2.vniiftri.ru
 ntps1-1.cs.tu-berlin.de
-ix.ru
+ntp.ix.ru
 
 # Coding
 swagger.io
