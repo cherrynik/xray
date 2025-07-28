@@ -1,8 +1,3 @@
-stripe.com
-restream.io
-soundcloud.com
-wetransfer.com
-
 # AI
 anthropic.com
 claude.ai
@@ -96,6 +91,7 @@ swarthmore.edu
 
 # Streaming
 netflix.com
+restream.io
 
 # Music
 snd.sc
@@ -122,6 +118,7 @@ amazon.com
 apple.com
 etsy.com
 asos.com
+stripe.com
 
 # Networks
 proton.me
@@ -228,3 +225,6 @@ discordpartygames.com
 discordsays.com
 discordsez.com
 discordstatus.com
+
+# Other
+wetransfer.com
