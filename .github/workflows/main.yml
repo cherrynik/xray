@@ -21,13 +21,13 @@ jobs:
       - name: Check output file permissions
         run: |
           ls -l output/
-          file output/geosite.dat
-          head output/geosite.dat || echo "cannot read"
+          file output/custom.dat
+          head output/custom.dat || echo "cannot read"
 
       - name: Backup old and apply new geosite.dat
         run: |
-          sudo cp /usr/local/x-ui/bin/geosite.dat /usr/local/x-ui/bin/geosite.dat.bak
-          sudo mv output/geosite.dat /usr/local/x-ui/bin/geosite.dat
+          sudo cp /usr/local/x-ui/bin/custom.dat /usr/local/x-ui/bin/custom.dat.bak
+          sudo mv output/custom.dat /usr/local/x-ui/bin/custom.dat
           sudo x-ui restart
 
       - name: Clean up previous containers
