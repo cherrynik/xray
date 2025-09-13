@@ -9,5 +9,5 @@ RUN go mod tidy
 COPY ./input ./input
 
 ENTRYPOINT go run ./ --datapath=./input && \
-  cp geosite.dat ./output/geosite.dat && \
-  chmod 644 ./output/geosite.dat
+  cp geosite.dat ./output/custom.dat && \
+  chmod 644 ./output/custom.dat
