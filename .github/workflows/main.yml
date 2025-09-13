@@ -26,7 +26,7 @@ jobs:
 
       - name: Backup old and apply new geosite.dat
         run: |
-          sudo cp /usr/local/x-ui/bin/custom.dat /usr/local/x-ui/bin/custom.dat.bak
+          [ -f /usr/local/x-ui/bin/custom.dat ] && sudo cp /usr/local/x-ui/bin/custom.dat /usr/local/x-ui/bin/custom.dat.bak
           sudo mv output/custom.dat /usr/local/x-ui/bin/custom.dat
           sudo x-ui restart
 
