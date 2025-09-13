@@ -39,7 +39,7 @@ githubcopilot.com
 github.com
 # chatgpt.com
 # openai.com
-ext:geosite:openai
+full:ext:geosite.dat:openai
 youtrack.cloud
 intellij.com
 intellij.net
