@@ -104,6 +104,7 @@ sndcdn.com
 soundcloud.cloud
 soundcloud.com
 spotify.com
+spotifycdn.com
 
 # Cloud
 amazon.com
@@ -121,7 +122,6 @@ n8n.cloud
 # E-commerce
 ultra-shop.com
 nike.com
-amazon.com
 apple.com
 etsy.com
 asos.com
@@ -143,6 +143,10 @@ twitter.com
 t.co
 twimg.com
 tinder.com
+firebaseapp.com
+pornhub.com
+erotorrent.ru
+hoo.be
 facebook.com
 quora.com
 medium.com
@@ -167,6 +171,7 @@ ibyteimg.com
 ipstatp.com
 isnssdk.com
 muscdn.com
+scdn.co
 musemuse.cn
 musical.ly
 pstatp.com
@@ -238,6 +243,14 @@ wetransfer.com
 morningstar.com
 openphone.com
 canva.com
+clarity.ms
+mui.com
+mktoresp.com
+imgpog.com
+buildcores.com
+posthog.com
+cluely.com
+pexels.com
 
 # SSL
 zerossl.com
